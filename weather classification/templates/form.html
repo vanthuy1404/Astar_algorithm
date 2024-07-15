@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Weather Prediction Form</h1>
+        <form action="/predict" method="post" class="mt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="temp">Temperature(℃):</label>
+                        <input type="number" step="0.1" class="form-control" name="temp" id="temp" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="humidity">Humidity:</label>
+                        <input type="number" step="0.1" class="form-control" name="humidity" id="humidity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="wind_speed">Wind Speed(km/h):</label>
+                        <input type="number" step="0.1" class="form-control" name="wind_speed" id="wind_speed" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precipitation">Precipitation(%):</label>
+                        <input type="number" step="0.1" class="form-control" name="precipitation" id="precipitation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cloud_cover">Cloud Cover:</label>
+                        <select name="cloud_cover" id="cloud_cover" class="form-control" required>
+                            <option value="0">clear</option>
+                            <option value="1">cloudy</option>
+                            <option value="2">overcast</option>
+                            <option value="3">partly cloudy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="atmospheric_pressure">Atmospheric Pressure:</label>
+                        <input type="number" step="0.1" class="form-control" name="atmospheric_pressure" id="atmospheric_pressure" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="uv_index">UV Index:</label>
+                        <input type="number" step="0.1" class="form-control" name="uv_index" id="uv_index" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="season">Season:</label>
+                        <select name="season" id="season" class="form-control" required>
+                            <option value="0">Autumn</option>
+                            <option value="1">Spring</option>
+                            <option value="2">Summer</option>
+                            <option value="3">Winter</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="visibility">Visibility(km):</label>
+                        <input type="number" step="0.1" class="form-control" name="visibility" id="visibility" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <select name="location" id="location" class="form-control" required>
+                            <option value="0">coastal</option>
+                            <option value="1">inland</option>
+                            <option value="2">mountain</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
